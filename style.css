@@ -5,7 +5,7 @@
 }
 body{
     height: 100vh;
-    background-color: black;
+    background-color: rgb(39, 38, 38);
 }
 header{
     background-color: rgb(0, 0, 0,0.8);
@@ -15,6 +15,7 @@ header{
     width: 100%;
     height: 7vh;
     z-index: 100000;
+    box-shadow: 0 0 30px black;
 }
 header .logo{
     position: absolute;
@@ -62,7 +63,8 @@ nav ul li a{
     background-position: center;
     width: 100%;
     height: 100vh;
-    position: relative
+    position: relative;
+    box-shadow: 0 0 50px black;
 }
 .first-section .title h3{
     font-size: 40px;
@@ -96,24 +98,29 @@ nav ul li a{
     background-color: rgba(28, 27, 27, 0.368);
     transition: 0.6s;
     color: white;
+    box-shadow: 0 0 15px black;
+}
+.title{
+    box-shadow: 0 0 30px black;
 }
 .first-section a{
     text-decoration: none;
     color: black;
 }
 .mainbox{
-    margin-top: 15px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 .itembox{
-    border: solid 1px;
-    border-color: white;
+    /* border: solid 1px;
+    border-color: white; */
     display: flex;
     flex-direction: column;
     color: white;
     width: 20%;
     margin: 20px;
+    box-shadow: 0 0 15px black;
 }
 .itembox h4{
     margin-top: 5px;
@@ -136,17 +143,21 @@ nav ul li a{
 .itembox:hover{
     transition: 1s;
     transform: scale(1.2);
+    box-shadow: 0 0 15px black;
 }
 footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     margin-top: 40px;
     color: white;
     width: 100%;
-    height: 10vh;
-    background-color: rgb(52, 50, 50);
+    height: 20vh;
+    background-color: rgb(31, 29, 29);
+    box-shadow: 0 0 30px black;
 }
 footer h4{
     font-size: 20px;
-    text-align: center;
 }
 .socimgs{
     display: flex;
@@ -161,4 +172,17 @@ footer h4{
 .soclogo img{
     width: 100%;
     height: 100%;
+}
+.scetextbox{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+span{
+    color: red;
+    font-weight: bold;
+}
+.poweredby{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
 }
