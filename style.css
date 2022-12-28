@@ -20,15 +20,15 @@ header{
 header .logo{
     margin-left: 50px;
     letter-spacing: 2px;
-    font-size: 15px;
+    font-size: 18px;
     padding: 20px;
     color: #fff;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
 }
 .login{
     letter-spacing: 2px;
-    margin-right: 35px;
+    margin-right: 100px;
     font-size: 15px;
     font-weight: 700;
     display: flex;
@@ -58,7 +58,7 @@ nav ul li{
     text-decoration: none;
     list-style: none;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 15px;
 }
 nav ul li a:hover{
     color:white;
@@ -219,8 +219,8 @@ span{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgb(39, 38, 38),red, rgb(39, 38, 38)  );
-    animation: animate 5s linear infinite;
+    background: linear-gradient(rgb(39, 38, 38),red, rgb(39, 38, 38));
+    animation: animate 4s linear infinite;
 }
 @keyframes animate{
     0%{
@@ -343,6 +343,7 @@ span{
 }
 .signin .content .form .inputbx input[type="submit"]:hover{
     background: red;
+    transition: 1s;
 }
 @media (max-width: 900px){
     .loginsection span{
