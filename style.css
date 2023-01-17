@@ -4,27 +4,42 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    height: 600px;
     background-color: rgb(39, 38, 38);
+}
+.flex{
+    display: flex;
+}
+.container{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
 }
 header{
     background-color: rgb(0, 0, 0,0.8);
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     width: 100%;
     height: 50px;
     z-index: 100000;
     box-shadow: 0 0 30px black;
 }
+.mobile-header{
+    margin: 0 auto;
+    display: none;
+    justify-content: center;
+}
+.top-header{
+    justify-content: space-between;
+}
 header .logo{
     margin-left: 50px;
     letter-spacing: 2px;
     font-size: 18px;
-    padding: 20px;
+    padding: 15px;
     color: #fff;
     text-decoration: none;
     text-align: center;
+    vertical-align: middle;
 }
 .login{
     letter-spacing: 2px;
@@ -35,24 +50,20 @@ header .logo{
     align-items: center;
     text-decoration: none;
     color: rgb(149, 148, 148);
+    transition: .8s;
 }
 .login:hover{
     color:white;
-    transition: .8s;
 }
 nav{
-    display: flex;
     justify-content: center;
 }
 nav ul{
-    display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
 }
 nav ul li{
-    display: flex;
-    justify-content: center;
     letter-spacing: 2px;
     margin-left: 30px;
     text-decoration: none;
@@ -62,11 +73,12 @@ nav ul li{
 }
 nav ul li a:hover{
     color:white;
-    transition: .8s;
+    transition: 0.8s;
 }
 nav ul li a{
     text-decoration: none;
     color: rgb(149, 148, 148);
+    transition: 0.8s;
 }
 .first-section{
     background-image: url(images/background-battle.jpg);
@@ -74,7 +86,7 @@ nav ul li a{
     background-size:cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 800px;
     position: relative;
     box-shadow: 0 0 50px black;
 }
@@ -85,20 +97,17 @@ nav ul li a{
     border: solid 1px;
     position: absolute;
     left: 50px;
-    top: 80px;
+    top: 120px;
     text-align: center;
     font-size: 15px;
     font-family: papyrus;
-    display: flex;
     flex-direction: column;
-    text-align: center;
     width: 400px;
     background-color: rgb(28, 27, 27, 0.368);
     color: rgb(163, 163, 163);
-
+    transition: 0.6s;
 }
 .titleimg{
-    display: flex;
     justify-content: center;
     width: 100%;
 }
@@ -108,7 +117,6 @@ nav ul li a{
 }
 .first-section .title:hover{
     background-color: rgba(28, 27, 27, 0.368);
-    transition: 0.6s;
     color: white;
     box-shadow: 0 0 15px black;
 }
@@ -121,16 +129,16 @@ nav ul li a{
 }
 .mainbox{
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .itembox{
-    display: flex;
     flex-direction: column;
     color: white;
-    width: 15%;
+    width: 300px;
     margin: 20px;
     box-shadow: 0 0 15px black;
+    transition: 1s;
 }
 .itembox h4{
     margin-top: 5px;
@@ -149,20 +157,20 @@ nav ul li a{
 .scenarioimg img{
     width:100%;
     height: 100%;
+    object-fit: cover;
 }
 .itembox:hover{
-    transition: 1s;
+
     transform: scale(1.2);
     box-shadow: 0 0 15px black;
 }
 footer{
-    display: flex;
     align-items: center;
     justify-content: space-around;
     margin-top: 40px;
     color: white;
     width: 100%;
-    height: 20vh;
+    padding: 20px 20px;
     background-color: rgb(31, 29, 29);
     box-shadow: 0 0 30px black;
 }
@@ -170,7 +178,6 @@ footer h4{
     font-size: 20px;
 }
 .socimgs{
-    display: flex;
     justify-content: center;
 }
 .soclogo{
@@ -317,19 +324,19 @@ span{
     color: rgb(149, 148, 148);
     font-weight: 600;
     text-decoration: none;
+    transition: 1s;
 }
 .signin .content .form .links a:hover{
     color: red;
-    transition: 1s;
     font-weight: 600;
 }
 .signin .content .form .links a:nth-child(2){
     color: rgb(149, 148, 148);
     font-weight: 600;
+    transition: 1s;
 }
 .signin .content .form .links a:nth-child(2):hover{
     color: red;
-    transition: 1s;
     font-weight: 600;
 }
 .signin .content .form .inputbx input[type="submit"]{
@@ -340,20 +347,56 @@ span{
     font-size: 1.25em;
     letter-spacing: 0.05em;
     cursor: pointer;
+    transition: 1s;
 }
 .signin .content .form .inputbx input[type="submit"]:hover{
     background: red;
-    transition: 1s;
 }
-@media (max-width: 900px){
+@media (max-width: 1024px){
     .loginsection span{
         width: calc(10vw - 2px);
         height: calc(10vw - 2px);
     }
+    .desktop-header{
+    display: none;
+    }
+    .mobile-header{
+        display: flex;
+    }
+    .first-section{
+        padding-top: 80px;
+        height: unset;
+    }
+    .first-section .title{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        position: unset;
+    }
+    .mainbox{
+        flex-direction: column;
+    }
+    .itembox{
+        flex-direction: row;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .itembox:hover{
+        transform: scale(1.05);
+    }
+    .itembox h4{
+        text-align: start;
+    }
 }
-@media (max-width: 600px){
+@media (max-width: 467px){
     .loginsection span{
         width: calc(20vw - 2px);
         height: calc(20vw - 2px);
+    }
+    .desktop-header{
+        display: none;
+    }
+    .mobile-header{
+        display: flex;
     }
 }
