@@ -38,6 +38,7 @@ header{
     justify-content: space-between;
 }
 header .logo{
+    margin-left: 50px;
     letter-spacing: 2px;
     font-size: 18px;
     padding: 15px;
@@ -392,6 +393,9 @@ span{
     }
     .itembox h4{
         text-align: start;
+    }
+    header .logo{
+        margin-left: unset;
     }
 }
 @media (max-width: 467px){
