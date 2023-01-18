@@ -398,8 +398,16 @@ span{
     .mobile-header{
         display: flex;
     }
+    .itembox{
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        padding-bottom: 20px;
+    }
     .scenarioimg{
-        width: 300%;
         height: unset;
+    }
+    .scenario-brief-summary{
+        display: none;
     }
 }
