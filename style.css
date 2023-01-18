@@ -157,6 +157,7 @@ nav ul li a{
     font-size: 15px;
 }
 .scenarioimg{
+    min-width: 200px;
     width: 100%;
     height: 200px;
 }
@@ -408,6 +409,9 @@ span{
     }
     .mobile-header{
         display: flex;
+    }
+    .mobile-header p{
+        padding-right: 20px;
     }
     .itembox{
         flex-direction: column;
